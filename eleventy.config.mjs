@@ -6,14 +6,20 @@ const root = path.resolve('content');
 const markdownFiles = (folder) => fs.existsSync(folder)
   ? fs.readdirSync(folder, { recursive: true }).filter((file) => file.endsWith('.md')).map((file) => path.join(folder, file))
   : [];
-const toUrl = (file) => `/${path.relative(root, file).replace(/\\/g, '/').replace(/\.md$/, '/')}`;
+const toUrl = (file) => `/chenxi-blog/${path.relative(root, file).replace(/\\/g, '/').replace(/\.md$/, '/')}`;
 const organCategories = ['前端', '后端', '部署', 'AI', '数据'];
+const pathPrefix = '/chenxi-blog/';
 
 export default function (config) {
   config.ignores.add('./docs/**');
   config.ignores.add('./test/**');
   config.ignores.add('./src/**');
   config.addPassthroughCopy('styles.css');
+  config.addFilter('url', (url) => {
+    if (/^(?:https?:|#)/.test(url)) return url;
+    const normalized = url.startsWith('/') ? url : `/${url}`;
+    return normalized.startsWith(pathPrefix) ? normalized : `${pathPrefix.slice(0, -1)}${normalized}`;
+  });
   config.addGlobalData('site', { name: '晨汐', description: '记录 AI 学习，把复杂概念讲得可亲近。' });
   config.addFilter('displayDate', (value) => new Intl.DateTimeFormat('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(value).replaceAll('/', '.'));
   config.addCollection('recent', (api) => api.getAll().filter((item) => ['细胞', '器官', '个体'].some((name) => item.inputPath.includes(`/content/${name}/`))).sort((a, b) => b.date - a.date).slice(0, 5));

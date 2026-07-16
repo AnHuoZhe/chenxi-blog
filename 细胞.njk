@@ -3,4 +3,4 @@ layout: layouts/base.njk
 title: 细胞
 permalink: /细胞/
 ---
-<section class="page-head"><p class="eyebrow">最小知识单位</p><h1>细胞区</h1><p class="lede">从一个概念开始，把 AI 输出看懂。</p></section><div class="cards">{% for post in collections.cells %}<a class="card" href="{{ post.url }}"><h3>{{ post.data.title }}</h3><p>{{ post.data.description }}</p><small>{{ post.date | displayDate }}</small></a>{% endfor %}</div>
+<section class="page-head"><p class="eyebrow">最小知识单位</p><h1>细胞区</h1><p class="lede">从一个概念开始，把 AI 输出看懂。</p></section><div class="cards">{% for post in collections.cells %}<a class="card" href="{{ post.url | url }}"><h3>{{ post.data.title }}</h3><p>{{ post.data.description }}</p><small>{{ post.date | displayDate }}</small></a>{% endfor %}</div>

@@ -20,5 +20,13 @@ test('does not link the current article terminology to itself', () => {
 
   assert.match(html, /^React 会处理 /);
   assert.doesNotMatch(html, /href="\/器官\/前端\/React\//);
-  assert.match(html, /href="\/组织wiki\/JSON\//);
+  assert.match(html, /href="\/chenxi-blog\/组织wiki\/JSON\//);
+});
+
+test('prefixes terminology links for the GitHub Pages site', () => {
+  const html = linkTerminology('JSON', [
+    { name: 'JSON', url: '/组织wiki/JSON/', kind: 'wiki' },
+  ]);
+
+  assert.match(html, /href="\/chenxi-blog\/组织wiki\/JSON\//);
 });

@@ -34,5 +34,5 @@ export default function (config) {
     ...markdownFiles(path.join(root, '器官')).map((file) => ({ name: path.basename(file, '.md'), url: toUrl(file), kind: 'organ' })),
   ]));
   config.addFilter('autoLinks', (html, terms, currentTerm) => linkTerminology(html, terms || [], currentTerm));
-  return { dir: { input: '.', includes: '_includes', output: 'dist' }, ignores: ['docs/**', 'test/**', 'src/**', 'node_modules/**'], templateFormats: ['md', 'njk', 'html'] };
+  return { dir: { input: '.', includes: '_includes', output: 'dist' }, pathPrefix: '/chenxi-blog/', ignores: ['docs/**', 'test/**', 'src/**', 'node_modules/**'], templateFormats: ['md', 'njk', 'html'] };
 }

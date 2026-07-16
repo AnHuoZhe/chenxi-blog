@@ -1,0 +1,6 @@
+---
+layout: layouts/base.njk
+---
+{% if '/细胞/' in page.url %}{% set section = '细胞' %}{% elseif '/器官/' in page.url %}{% set section = '器官' %}{% elseif '/组织wiki/' in page.url %}{% set section = '组织wiki' %}{% else %}{% set section = '个体' %}{% endif %}
+<p class="crumb"><a href="/">首页</a> <span>›</span> <a href="/{{ section }}/">{{ section }}</a> <span>›</span> {{ title }}</p>
+<article><p class="eyebrow">{{ date | displayDate }}{% if status %} · {{ status }}{% endif %}</p><h1>{{ title }}</h1><p class="lede">{{ description }}</p><div class="prose">{{ content | autoLinks(collections.terminology, title) | safe }}</div></article>

@@ -1,0 +1,6 @@
+---
+layout: layouts/base.njk
+title: 首页
+---
+<section class="hero"><div class="avatar">晨</div><div><p class="eyebrow">你好，我是</p><h1>晨汐</h1><p class="lede">{{ site.description }}</p></div></section>
+<section><h2>最近更新</h2><div class="cards">{% for post in collections.recent %}<a class="card" href="{{ post.url }}"><p class="eyebrow">{{ post.date | displayDate }}</p><h3>{{ post.data.title }}</h3><p>{{ post.data.description }}</p></a>{% endfor %}</div></section>

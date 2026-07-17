@@ -15,6 +15,7 @@ export default function (config) {
   config.ignores.add('./test/**');
   config.ignores.add('./src/**');
   config.addPassthroughCopy('styles.css');
+  config.addPassthroughCopy('scripts');
   config.addFilter('url', (url) => {
     if (/^(?:https?:|#)/.test(url)) return url;
     const normalized = url.startsWith('/') ? url : `/${url}`;

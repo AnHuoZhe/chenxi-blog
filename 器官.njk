@@ -3,4 +3,4 @@ layout: layouts/base.njk
 title: 器官
 permalink: /器官/
 ---
-<section class="page-head"><p class="eyebrow">按用途学习</p><h1>器官区</h1></section>{% for group in collections.organGroups %}<section class="organ-group"><h2>{{ group.name }}</h2>{% for organ in group.organs %}<a class="organ" href="{{ organ.url | url }}"><span>{{ group.name }}</span><div><h3>{{ organ.data.title }}</h3><p>{{ organ.data.description }}</p></div></a>{% endfor %}</section>{% endfor %}
+<section class="collection-page collection-page--organs"><header class="page-head"><p class="eyebrow">按用途学习</p><h1>器官区</h1><p class="lede">把知识组合成可调用的技能模块。</p></header><div class="organ-groups">{% for group in collections.organGroups %}<section class="organ-group"><h2>{{ group.name }}</h2>{% for organ in group.organs %}<a class="organ" href="{{ organ.url | url }}"><span>{{ group.name }}</span><div><h3>{{ organ.data.title }}</h3><p>{{ organ.data.description }}</p></div></a>{% endfor %}</section>{% endfor %}</div></section>

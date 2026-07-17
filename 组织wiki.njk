@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+title: 组织wiki
+permalink: /组织wiki/
+---
+<section class="collection-page collection-page--wiki" aria-labelledby="wiki-index-title">
+  <header class="page-head">
+    <p class="eyebrow">术语词典</p>
+    <h1 id="wiki-index-title">组织 wiki</h1>
+    <p class="lede">从这里查找知识花园中反复出现的基础概念。</p>
+  </header>
+  <div class="collection-list cards">
+    {% for term in collections.terminology %}
+      {% if term.kind == 'wiki' %}
+        <a class="card" href="{{ term.url | url }}">
+          <p class="eyebrow">组织术语</p>
+          <h2>{{ term.name }}</h2>
+          <p>查看这个概念的解释、比喻和用途。</p>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

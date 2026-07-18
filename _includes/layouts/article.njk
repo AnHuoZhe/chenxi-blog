@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
-{% if '/细胞/' in page.url %}{% set section = '细胞' %}{% elseif '/器官/' in page.url %}{% set section = '器官' %}{% elseif '/组织wiki/' in page.url %}{% set section = '组织wiki' %}{% else %}{% set section = '个体' %}{% endif %}
+{% if '/细胞/' in page.url %}{% set section = '细胞' %}{% elseif '/器官/' in page.url %}{% set section = '器官' %}{% elseif '/组织wiki/' in page.url %}{% set section = '组织wiki' %}{% elseif '/我的感悟/' in page.url %}{% set section = '我的感悟' %}{% else %}{% set section = '个体' %}{% endif %}
 {% set sectionUrl = '/' ~ section ~ '/' %}
 <nav class="breadcrumb" aria-label="面包屑导航"><ol><li><a href="{{ '/' | url }}">首页</a></li><li><a href="{{ sectionUrl | url }}">{{ section }}</a></li><li aria-current="page">{{ title }}</li></ol></nav>
 <article class="article"><header class="article-header"><div class="article-meta" aria-label="文章元信息"><time class="article-meta__date">{{ date | displayDate }}</time>{% if status %}<span class="article-meta__status">{{ status }}</span>{% endif %}<span class="article-meta__section">{{ section }}</span></div><h1>{{ title }}</h1><p class="lede">{{ description }}</p></header><div class="prose">{{ content | autoLinks(collections.terminology, title) | safe }}</div><footer class="article-footer"><a class="article-return" href="{{ sectionUrl | url }}">← 返回{{ section }}区</a></footer></article>

@@ -1,5 +1,15 @@
 const pathPrefix = '/chenxi-blog';
 
+export const reflectionsTerminology = [
+  { name: 'LLM', url: '/我的感悟/llm-characteristics-limitations/' },
+  { name: 'Agent', url: '/我的感悟/what-is-an-agent/' },
+  { name: 'RAG', url: '/我的感悟/traditional-rag-replacement-trends-and-llm-wiki/' },
+  { name: 'Prompt工程', url: '/我的感悟/prompt-engineering/' },
+  { name: 'AI蒸馏', url: '/我的感悟/ai-distillation-and-digital-twin-differences/' },
+  { name: '数字分身', url: '/我的感悟/ai-distillation-and-digital-twin-differences/' },
+  { name: 'Eval体系', url: '/我的感悟/eval-system-and-lifecycle/' },
+];
+
 export function buildTerminology(entries) {
   return entries
     .filter(({ name }) => name.length >= 3)

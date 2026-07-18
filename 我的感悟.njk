@@ -1,0 +1,6 @@
+---
+layout: layouts/base.njk
+title: 我的感悟
+permalink: /我的感悟/
+---
+<section class="collection-page collection-page--reflections"><header class="page-head"><p class="eyebrow">我的感悟</p><h1>对 AI 的理解和看法</h1><p class="lede">记录学习与思考中的 AI 笔记。</p></header><div class="collection-list cards">{% for post in collections.reflections %}<a class="card" href="{{ post.url | url }}"><p class="eyebrow">{{ post.data.status }}</p><h3>{{ post.data.title }}</h3><p>{{ post.data.description }}</p></a>{% endfor %}</div></section>

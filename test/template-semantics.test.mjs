@@ -7,6 +7,7 @@ const homeTemplate = new URL('../index.njk', import.meta.url);
 const cellTemplate = new URL('../细胞.njk', import.meta.url);
 const organTemplate = new URL('../器官.njk', import.meta.url);
 const individualTemplate = new URL('../个体.njk', import.meta.url);
+const reflectionsTemplate = new URL('../我的感悟.njk', import.meta.url);
 const wikiIndexTemplate = new URL('../组织wiki.njk', import.meta.url);
 const articleTemplate = new URL('../_includes/layouts/article.njk', import.meta.url);
 const notFoundTemplate = new URL('../404.njk', import.meta.url);
@@ -49,10 +50,11 @@ test('provides labelled knowledge-garden entry points on the home page', async (
 });
 
 test('gives each collection page a labelled header and list structure', async () => {
-  const [cells, organs, individuals] = await Promise.all([
+  const [cells, organs, individuals, reflections] = await Promise.all([
     readTemplate(cellTemplate),
     readTemplate(organTemplate),
     readTemplate(individualTemplate),
+    readTemplate(reflectionsTemplate),
   ]);
 
   assert.match(cells, /class="collection-page collection-page--cells"/);
@@ -61,6 +63,8 @@ test('gives each collection page a labelled header and list structure', async ()
   assert.match(organs, /class="organ-groups"/);
   assert.match(individuals, /class="collection-page collection-page--individuals"/);
   assert.match(individuals, /class="collection-list cards"/);
+  assert.match(reflections, /class="collection-page collection-page--reflections"/);
+  assert.match(reflections, /collections\.reflections/);
 });
 
 test('provides a labelled index for organization wiki entries', async () => {

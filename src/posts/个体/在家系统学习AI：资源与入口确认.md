@@ -1,0 +1,1 @@
+用户计划通过吴恩达课程（B站）、Matt Wolfe的AI周报和Lenny's Podcast在家系统学习AI，需确认信息源入口。Matt Wolfe的AI周报可在其YouTube频道或官网订阅；Lenny's Podcast可在Apple Podcasts、Spotify等平台收听。建议补充Andrew Ng的《AI for Everyone》和《Machine Learning Yearning》强化基础，并关注Hugging Face、Papers with Code等实践平台。

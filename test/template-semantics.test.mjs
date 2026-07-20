@@ -4,11 +4,8 @@ import { readFile } from 'node:fs/promises';
 
 const baseTemplate = new URL('../_includes/layouts/base.njk', import.meta.url);
 const homeTemplate = new URL('../index.njk', import.meta.url);
-const cellTemplate = new URL('../细胞.njk', import.meta.url);
-const organTemplate = new URL('../器官.njk', import.meta.url);
 const individualTemplate = new URL('../个体.njk', import.meta.url);
 const reflectionsTemplate = new URL('../我的感悟.njk', import.meta.url);
-const wikiIndexTemplate = new URL('../组织wiki.njk', import.meta.url);
 const articleTemplate = new URL('../_includes/layouts/article.njk', import.meta.url);
 const notFoundTemplate = new URL('../404.njk', import.meta.url);
 
@@ -42,39 +39,21 @@ test('provides labelled knowledge-garden entry points on the home page', async (
 
   assert.match(template, /class="garden-entries"/);
   assert.match(template, /aria-labelledby="garden-entries-title"/);
-  assert.match(template, /href="{{ '\/细胞\/' \| url }}"/);
-  assert.match(template, /href="{{ '\/器官\/' \| url }}"/);
   assert.match(template, /href="{{ '\/个体\/' \| url }}"/);
-  assert.match(template, /href="{{ '\/组织wiki\/' \| url }}"/);
+  assert.match(template, /href="{{ '\/我的感悟\/' \| url }}"/);
   assert.match(template, /class="recent-posts"/);
 });
 
 test('gives each collection page a labelled header and list structure', async () => {
-  const [cells, organs, individuals, reflections] = await Promise.all([
-    readTemplate(cellTemplate),
-    readTemplate(organTemplate),
+  const [individuals, reflections] = await Promise.all([
     readTemplate(individualTemplate),
     readTemplate(reflectionsTemplate),
   ]);
 
-  assert.match(cells, /class="collection-page collection-page--cells"/);
-  assert.match(cells, /class="collection-list cards"/);
-  assert.match(organs, /class="collection-page collection-page--organs"/);
-  assert.match(organs, /class="organ-groups"/);
   assert.match(individuals, /class="collection-page collection-page--individuals"/);
   assert.match(individuals, /class="collection-list cards"/);
   assert.match(reflections, /class="collection-page collection-page--reflections"/);
   assert.match(reflections, /collections\.reflections/);
-});
-
-test('provides a labelled index for organization wiki entries', async () => {
-  const template = await readTemplate(wikiIndexTemplate);
-
-  assert.match(template, /class="collection-page collection-page--wiki"/);
-  assert.match(template, /aria-labelledby="wiki-index-title"/);
-  assert.match(template, /collections\.terminology/);
-  assert.match(template, /term\.kind == 'wiki'/);
-  assert.match(template, /href="{{ term\.url \| url }}"/);
 });
 
 test('makes article navigation, metadata, and return path explicit', async () => {

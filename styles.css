@@ -119,15 +119,10 @@ h3 { margin: .2rem 0; font-size: 1.15rem; }
   flex: none;
   width: 96px;
   height: 96px;
-  display: grid;
-  place-items: center;
   border: 5px solid var(--lime);
   border-radius: 50%;
-  background: var(--green);
+  object-fit: cover;
   box-shadow: 0 10px 24px rgb(23 107 80 / 22%);
-  color: white;
-  font-size: 2.2rem;
-  font-weight: 800;
 }
 .eyebrow, small { margin: 0; color: var(--green); font-size: .78rem; font-weight: 700; letter-spacing: .09em; }
 .lede { max-width: 650px; color: var(--muted); font-size: 1.16rem; }
@@ -209,7 +204,7 @@ h3 { margin: .2rem 0; font-size: 1.15rem; }
   .site-nav a { font-size: .9rem; }
   main { padding-block: 3rem; }
   .hero { align-items: flex-start; gap: 18px; margin-bottom: 3.5rem; }
-  .avatar { width: 68px; height: 68px; border-width: 3px; font-size: 1.55rem; }
+  .avatar { width: 68px; height: 68px; border-width: 3px; }
   h1 { font-size: clamp(2.4rem, 13vw, 3.6rem); }
   .cards { grid-template-columns: 1fr; }
   .garden-entries__grid { grid-template-columns: 1fr; }

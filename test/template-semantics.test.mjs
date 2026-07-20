@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 
 const baseTemplate = new URL('../_includes/layouts/base.njk', import.meta.url);
 const homeTemplate = new URL('../index.njk', import.meta.url);
-const individualTemplate = new URL('../个体.njk', import.meta.url);
+const individualTemplate = new URL('../项目.njk', import.meta.url);
 const reflectionsTemplate = new URL('../我的感悟.njk', import.meta.url);
 const articleTemplate = new URL('../_includes/layouts/article.njk', import.meta.url);
 const notFoundTemplate = new URL('../404.njk', import.meta.url);
@@ -39,7 +39,7 @@ test('provides labelled knowledge-garden entry points on the home page', async (
 
   assert.match(template, /class="garden-entries"/);
   assert.match(template, /aria-labelledby="garden-entries-title"/);
-  assert.match(template, /href="{{ '\/个体\/' \| url }}"/);
+  assert.match(template, /href="{{ '\/项目\/' \| url }}"/);
   assert.match(template, /href="{{ '\/我的感悟\/' \| url }}"/);
   assert.match(template, /class="recent-posts"/);
 });

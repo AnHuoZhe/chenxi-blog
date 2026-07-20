@@ -1,6 +1,0 @@
----
-layout: layouts/base.njk
-title: 个体
-permalink: /个体/
----
-<section class="collection-page collection-page--individuals"><header class="page-head"><p class="eyebrow">完整项目</p><h1>个体区</h1><p class="lede">把细胞与器官连成一次完整的实践。</p></header><div class="collection-list cards">{% for post in collections.individuals %}<a class="card" href="{{ post.url | url }}"><p class="eyebrow">{{ post.data.status }}</p><h3>{{ post.data.title }}</h3><p>{{ post.data.description }}</p></a>{% endfor %}</div></section>

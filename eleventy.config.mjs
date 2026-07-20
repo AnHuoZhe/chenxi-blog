@@ -6,9 +6,9 @@ const root = path.resolve('content');
 const markdownFiles = (folder) => fs.existsSync(folder)
   ? fs.readdirSync(folder, { recursive: true }).filter((file) => file.endsWith('.md')).map((file) => path.join(folder, file))
   : [];
-const toUrl = (file) => `/chenxi-blog/${path.relative(root, file).replace(/\\/g, '/').replace(/\.md$/, '/')}`;
+const toUrl = (file) => `/${path.relative(root, file).replace(/\\/g, '/').replace(/\.md$/, '/')}`;
 const organCategories = ['前端', '后端', '部署', 'AI', '数据'];
-const pathPrefix = '/chenxi-blog/';
+const pathPrefix = '/';
 
 export default function (config) {
   config.ignores.add('./docs/**');
@@ -44,5 +44,5 @@ export default function (config) {
     ...reflectionsTerminology,
   ]));
   config.addFilter('autoLinks', (html, terms, currentTerm) => linkTerminology(html, terms || [], currentTerm));
-  return { dir: { input: '.', includes: '_includes', output: 'dist' }, pathPrefix: '/chenxi-blog/', ignores: ['docs/**', 'test/**', 'src/**', 'node_modules/**'], templateFormats: ['md', 'njk', 'html'] };
+  return { dir: { input: '.', includes: '_includes', output: 'dist' }, pathPrefix: '/', ignores: ['docs/**', 'test/**', 'src/**', 'node_modules/**'], templateFormats: ['md', 'njk', 'html'] };
 }

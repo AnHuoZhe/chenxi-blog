@@ -16,6 +16,7 @@ export default function (config) {
   config.ignores.add('./src/**');
   config.addPassthroughCopy('styles.css');
   config.addPassthroughCopy('scripts');
+  config.addPassthroughCopy('CNAME');
   config.addFilter('url', (url) => {
     if (/^(?:https?:|#)/.test(url)) return url;
     const normalized = url.startsWith('/') ? url : `/${url}`;

@@ -3,6 +3,8 @@ title: 项目分析Agent
 date: 2026-07-21
 category: 个体
 tags: [Python, Agent, DeepSeek, 开源]
+layout: layouts/article.njk
+permalink: /个体/项目分析Agent/
 ---
 
 一个每日自动抓取GitHub Trending前十项目的五视角深度分析系统。

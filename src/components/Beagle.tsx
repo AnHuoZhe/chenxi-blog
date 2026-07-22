@@ -25,7 +25,7 @@ export function Beagle() {
           setShowBubble(false);
           schedule();
         }, 2000);
-      }, 5000 + Math.random() * 10000);
+      }, 20000 + Math.random() * 20000);
     };
     schedule();
     return () => {

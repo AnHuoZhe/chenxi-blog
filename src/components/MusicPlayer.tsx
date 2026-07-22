@@ -21,6 +21,14 @@ export function MusicPlayer() {
     };
   }, []);
 
+  // 静心模式开启立即静音（组件只是隐藏，Audio对象不会自动停）
+  useEffect(() => {
+    if (isZenMode) {
+      audioRef.current?.pause();
+      setPlaying(false);
+    }
+  }, [isZenMode]);
+
   if (isZenMode) return null;
 
   const togglePlay = () => {

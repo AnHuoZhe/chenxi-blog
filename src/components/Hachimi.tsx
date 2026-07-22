@@ -22,10 +22,10 @@ export function Hachimi() {
     setTimeout(() => {
       setPhase("spinosaurus");
       play("hachimi-hiss");
-      // 额外随机触发：老吴声或嚼口香糖（各50%）
+      // 50%概率追加一个彩蛋音（老吴或嚼口香糖），否则只有哈气声
       const r = Math.random();
-      if (r < 0.5) play("hachimi-laowu");
-      else play("hachimi-chew");
+      if (r < 0.25) play("hachimi-laowu");
+      else if (r < 0.5) play("hachimi-chew");
     }, 500);
     // 3秒后恢复常态
     setTimeout(() => setPhase("idle"), 3500);

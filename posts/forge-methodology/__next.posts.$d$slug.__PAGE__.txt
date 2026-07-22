@@ -1,8 +1,9 @@
 1:"$Sreact.fragment"
-2:I[22016,["/_next/static/chunks/2fxs2_360_49d.js","/_next/static/chunks/0dw8k10in276u.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],""]
-3:I[22432,["/_next/static/chunks/2fxs2_360_49d.js","/_next/static/chunks/0dw8k10in276u.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],"ArticleBody"]
-5:I[97367,["/_next/static/chunks/2fxs2_360_49d.js","/_next/static/chunks/0dw8k10in276u.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+2:I[22016,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/1h30lv62k9jt9.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],""]
+3:I[22432,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/1h30lv62k9jt9.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],"ArticleBody"]
+5:I[97367,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/1h30lv62k9jt9.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
 6:"$Sreact.suspense"
+:HL["/images/dagou-closed-cut.png","image"]
 4:T1502,
 Agent开发不是写提示词——是造一套生产线。锻造是这个生产线的操作手册。
 
@@ -88,5 +89,5 @@ Agent开发不是写提示词——是造一套生产线。锻造是这个生产
 工程幻象是没验证就设计抽象基类、为了"可扩展"加一堆没被用过的接口、在只有一个实现的情况下建工厂模式。看起来专业，实际上在替不存在的未来需求买单。
 
 先跑通再抽离。在现有工具上验证流程，踩完坑后再抽取——不对未验证的设计做过度工程化。
-0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto max-w-3xl px-4 py-12","children":[["$","$L2",null,{"href":"/posts","className":"text-sm text-muted-foreground hover:text-foreground","children":"← 返回天堂"}],["$","h1",null,{"className":"mb-2 mt-4 text-3xl font-bold","children":"锻造——Agent工程开发方法论"}],["$","p",null,{"className":"mb-8 text-sm text-muted-foreground","children":"2026-07-22"}],["$","div",null,{"className":"prose prose-invert max-w-none leading-7 [&_p]:my-4","children":["$","$L3",null,{"content":"$4"}]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/1v2xko-18uoq_.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"C1icw-zLWVxnSmhhGc3BF"}
+0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto max-w-2xl px-4 py-14","children":[["$","$L2",null,{"href":"/posts","className":"text-sm text-zinc-500 transition-colors hover:text-amber-300","children":"← 返回天堂"}],["$","header",null,{"className":"mb-10 mt-6 border-b border-amber-200/10 pb-8","children":[["$","div",null,{"className":"flex items-start justify-between gap-4","children":[["$","h1",null,{"className":"text-3xl font-black leading-snug text-amber-200","children":"锻造——Agent工程开发方法论"}],["$","img",null,{"src":"/images/dagou-closed-cut.png","alt":"大狗叫","className":"h-12 w-12 object-contain"}]]}],["$","time",null,{"className":"mt-3 block text-sm tracking-wider text-zinc-500","children":"2026-07-22"}]]}],["$","div",null,{"className":"article-prose","children":["$","$L3",null,{"content":"$4"}]}],["$","footer",null,{"className":"mt-14 border-t border-amber-200/10 pt-6 text-center text-xs text-zinc-600","children":"晨汐 · 天堂区 · 比格犬已巡逻过本页"}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/1v2xko-18uoq_.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7a9F8XqFXeXzHwZJfM0Gt"}
 7:null

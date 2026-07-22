@@ -1,8 +1,9 @@
 1:"$Sreact.fragment"
-2:I[22016,["/_next/static/chunks/2fxs2_360_49d.js","/_next/static/chunks/0dw8k10in276u.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],""]
-3:I[22432,["/_next/static/chunks/2fxs2_360_49d.js","/_next/static/chunks/0dw8k10in276u.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],"ArticleBody"]
-5:I[97367,["/_next/static/chunks/2fxs2_360_49d.js","/_next/static/chunks/0dw8k10in276u.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+2:I[22016,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/1h30lv62k9jt9.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],""]
+3:I[22432,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/1h30lv62k9jt9.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],"ArticleBody"]
+5:I[97367,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/1h30lv62k9jt9.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
 6:"$Sreact.suspense"
+:HL["/images/dagou-closed-cut.png","image"]
 4:Tc67,
 LLM生成文字的方式不是"脑中有完整答案→一次性写出来"。是"根据到目前为止已有的字，猜下一个最可能的字，猜出来之后把它加到已有字的末尾，再根据新的末尾猜下一个"。
 
@@ -30,5 +31,5 @@ LLM生成文字的方式不是"脑中有完整答案→一次性写出来"。是
 
 所以回来看：自回归单拿出来不神。但自回归 + 万亿级训练数据 + Transformer全上下文注意力 + 人类语言本身的高可预测性 —— 四样加起来，效果就不只是"猜字"了。它产生了看起来像理解的东西。
 
-但它还是模仿者。证据就是你踩过的坑——它信誓旦旦调了一个不存在的工具、给了不存在的城市天气。当概率分布指向"编一个合理的回答"比"说我不知道"概率更高时，它毫不犹豫地编。真正的理解不会这样。0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto max-w-3xl px-4 py-12","children":[["$","$L2",null,{"href":"/posts","className":"text-sm text-muted-foreground hover:text-foreground","children":"← 返回天堂"}],["$","h1",null,{"className":"mb-2 mt-4 text-3xl font-bold","children":"LLM自回归原理"}],["$","p",null,{"className":"mb-8 text-sm text-muted-foreground","children":"2026-07-22"}],["$","div",null,{"className":"prose prose-invert max-w-none leading-7 [&_p]:my-4","children":["$","$L3",null,{"content":"$4"}]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/1v2xko-18uoq_.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"C1icw-zLWVxnSmhhGc3BF"}
+但它还是模仿者。证据就是你踩过的坑——它信誓旦旦调了一个不存在的工具、给了不存在的城市天气。当概率分布指向"编一个合理的回答"比"说我不知道"概率更高时，它毫不犹豫地编。真正的理解不会这样。0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto max-w-2xl px-4 py-14","children":[["$","$L2",null,{"href":"/posts","className":"text-sm text-zinc-500 transition-colors hover:text-amber-300","children":"← 返回天堂"}],["$","header",null,{"className":"mb-10 mt-6 border-b border-amber-200/10 pb-8","children":[["$","div",null,{"className":"flex items-start justify-between gap-4","children":[["$","h1",null,{"className":"text-3xl font-black leading-snug text-amber-200","children":"LLM自回归原理"}],["$","img",null,{"src":"/images/dagou-closed-cut.png","alt":"大狗叫","className":"h-12 w-12 object-contain"}]]}],["$","time",null,{"className":"mt-3 block text-sm tracking-wider text-zinc-500","children":"2026-07-22"}]]}],["$","div",null,{"className":"article-prose","children":["$","$L3",null,{"content":"$4"}]}],["$","footer",null,{"className":"mt-14 border-t border-amber-200/10 pt-6 text-center text-xs text-zinc-600","children":"晨汐 · 天堂区 · 比格犬已巡逻过本页"}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/1v2xko-18uoq_.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7a9F8XqFXeXzHwZJfM0Gt"}
 7:null

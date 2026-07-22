@@ -2,7 +2,6 @@
 
 import { useZenMode } from "@/contexts/ZenModeContext";
 import { useChargeBar } from "@/hooks/useChargeBar";
-import { DagouSVG } from "@/components/svg/DagouSVG";
 
 export function DagouJiao() {
   const { isZenMode } = useZenMode();
@@ -10,9 +9,13 @@ export function DagouJiao() {
 
   return (
     <div className="fixed bottom-[20px] right-[20px] z-40 flex flex-col items-center gap-2">
-      {/* 圆形容器 */}
-      <div className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-amber-400/60 bg-muted/60 backdrop-blur">
-        <DagouSVG size={64} />
+      {/* 圆形容器：平时闭嘴憋住，释放瞬间张嘴 */}
+      <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border-2 border-amber-400/60 bg-amber-50/10 backdrop-blur">
+        <img
+          src={flash ? "/images/dagou-open-cut.png" : "/images/dagou-closed-cut.png"}
+          alt="大狗叫"
+          className="h-16 w-16 object-contain"
+        />
       </div>
       {/* 蓄力条 */}
       <div className="w-[120px]">

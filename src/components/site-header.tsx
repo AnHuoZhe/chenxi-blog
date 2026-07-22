@@ -8,21 +8,27 @@ export function SiteHeader() {
   const { isZenMode, toggleZenMode } = useZenMode();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur">
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
-        <Link href="/" className="text-lg font-bold tracking-wide">
-          大狗叫博客
+    <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-zinc-950/80 backdrop-blur-md">
+      <div className="mx-auto flex h-14 max-w-3xl items-center justify-between px-4">
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/images/beagle-cut.png" alt="比格犬" className="h-7 w-7 object-contain" />
+          <span className="text-lg font-black tracking-[0.3em] text-amber-200">
+            晨汐
+          </span>
         </Link>
         <nav className="flex items-center gap-6 text-sm">
-          <Link href="/" className="transition-colors hover:text-foreground/80">
+          <Link
+            href="/posts"
+            className="text-zinc-300 transition-colors hover:text-amber-300"
+          >
             天堂
           </Link>
-          <Link href="/" className="transition-colors hover:text-foreground/80">
+          <span className="cursor-not-allowed text-zinc-600" title="锁链还封着">
             冥界
-          </Link>
-          {/* 静心模式开关：珊迪玻璃罩 */}
+          </span>
+          {/* 静心模式：珊迪玻璃罩 */}
           <label className="flex items-center gap-2">
-            <span className="text-muted-foreground">静心模式</span>
+            <span className="text-zinc-400">静心</span>
             <Switch
               checked={isZenMode}
               onCheckedChange={toggleZenMode}

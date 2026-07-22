@@ -6,6 +6,7 @@ import { useZenMode } from "@/contexts/ZenModeContext";
 export type SoundName =
   | "beagle-wer"
   | "dagou-call"
+  | "dagou-release"
   | "hachimi-hiss"
   | "hachimi-laowu"
   | "hachimi-chew"

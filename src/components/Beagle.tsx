@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { useZenMode } from "@/contexts/ZenModeContext";
 import { useSound } from "@/hooks/useSound";
-import { BeagleSVG } from "@/components/svg/BeagleSVG";
 
 export function Beagle() {
   const { isZenMode } = useZenMode();
@@ -39,7 +38,7 @@ export function Beagle() {
     <div className="fixed bottom-0 left-0 z-40 h-[60px] w-full overflow-hidden border-t border-border/40 bg-muted/40 backdrop-blur">
       {isZenMode ? (
         <div className="flex h-full items-center gap-3 px-4">
-          <BeagleSVG size={40} />
+          <img src="/images/beagle-cut.png" alt="比格犬" className="h-9 w-9 object-contain" />
           <span className="text-sm text-muted-foreground">
             比格犬被隔离在罩子外，扒玻璃中…
           </span>
@@ -52,7 +51,7 @@ export function Beagle() {
                 wer wer wer!
               </div>
             )}
-            <BeagleSVG size={44} />
+            <img src="/images/beagle-cut.png" alt="比格犬" className="h-11 w-11 object-contain" />
           </div>
         </div>
       )}

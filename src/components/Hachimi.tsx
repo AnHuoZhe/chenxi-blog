@@ -4,8 +4,6 @@ import { useRef, useState } from "react";
 import { useZenMode } from "@/contexts/ZenModeContext";
 import { useInvasion } from "@/contexts/InvasionContext";
 import { useSound } from "@/hooks/useSound";
-import { HachimiRoundSVG } from "@/components/svg/HachimiRoundSVG";
-import { HachimiHissSVG } from "@/components/svg/HachimiHissSVG";
 
 type Phase = "idle" | "sucking" | "spinosaurus";
 
@@ -45,14 +43,20 @@ export function Hachimi() {
       aria-label="哈基米盒子"
     >
       {phase === "sucking" && (
-        // 吸入：🐱缩小+旋转进📦
-        <span className="text-4xl hachimi-suck" role="img" aria-label="吸入中">
-          🐱
-        </span>
+        // 吸入：缩小+旋转进📦
+        <img
+          src="/images/hachimi-round-cut.png"
+          alt="吸入中"
+          className="hachimi-suck h-12 w-12 object-contain"
+        />
       )}
       {phase === "spinosaurus" && (
         <>
-          <HachimiHissSVG size={72} />
+          <img
+            src="/images/hachimi-hiss-cut.png"
+            alt="哈气耄耋·棘背龙"
+            className="h-16 w-auto object-contain drop-shadow-[0_0_10px_rgba(168,85,247,0.8)]"
+          />
           <span className="text-xs font-bold text-purple-400">棘背龙形态！</span>
         </>
       )}
@@ -62,7 +66,11 @@ export function Hachimi() {
             📦
           </span>
           <span className={isInvading ? "hachimi-shake" : ""}>
-            <HachimiRoundSVG size={48} />
+            <img
+              src="/images/hachimi-round-cut.png"
+              alt="圆头耄耋"
+              className="h-12 w-12 object-contain"
+            />
           </span>
           <span className="text-xs text-muted-foreground">
             {isZenMode ? "被隔离在罩子外" : isInvading ? "哈气!" : "哈基米"}

@@ -29,7 +29,7 @@ export function useChargeBar() {
     setCharge((prev) => {
       const next = prev + amount;
       if (next >= 100) {
-        play("dagou-call");
+        play("dagou-release");
         setFlash(true);
         setTimeout(() => setFlash(false), 1200);
         localStorage.setItem(STORAGE_KEY, "0");

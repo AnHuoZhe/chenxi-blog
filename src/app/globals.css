@@ -326,3 +326,92 @@
   50%      { opacity: 1; }
 }
 .hiss-breath { animation: hiss-breath-flow 0.9s ease-in-out infinite; }
+
+/* ===== 氛围层 ===== */
+/* 天堂光尘：缓缓升起 */
+@keyframes mote-rise {
+  0%   { transform: translateY(0); opacity: 0; }
+  15%  { opacity: 0.9; }
+  100% { transform: translateY(-38vh); opacity: 0; }
+}
+.mote-rise { animation: mote-rise linear infinite; }
+
+/* 邪域余烬：紫色火点上升摇曳 */
+@keyframes ember-rise {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0; }
+  12%  { opacity: 1; }
+  60%  { transform: translate(-12px, -20vh) scale(0.8); }
+  100% { transform: translate(10px, -36vh) scale(0.4); opacity: 0; }
+}
+.ember-rise { animation: ember-rise linear infinite; }
+
+/* 天堂主光晕缓慢呼吸 */
+@keyframes halo-breathe {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50%      { opacity: 0.85; transform: scale(1.06); }
+}
+.halo-breathe { animation: halo-breathe 6s ease-in-out infinite; }
+
+/* 邪域石门缝隙蠕动紫光 */
+@keyframes crack-crawl {
+  0%, 100% { opacity: 0.35; }
+  50%      { opacity: 0.9; }
+}
+.crack-crawl { animation: crack-crawl 3.4s ease-in-out infinite; }
+
+/* 冥界入侵：全屏暗角 */
+.invasion-vignette {
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(26, 6, 46, 0.55) 100%);
+}
+
+/* ===== 珊迪玻璃罩 ===== */
+.zen-dome {
+  position: relative;
+  border-radius: 2.5rem;
+  margin: 1rem;
+  outline: 2px solid rgba(186, 230, 253, 0.35);
+  outline-offset: -2px;
+  background:
+    radial-gradient(120% 90% at 18% 0%, rgba(255, 255, 255, 0.10), transparent 45%),
+    radial-gradient(100% 70% at 85% 100%, rgba(125, 211, 252, 0.06), transparent 50%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -18px 40px rgba(125, 211, 252, 0.05),
+    0 0 60px rgba(125, 211, 252, 0.12);
+  overflow: hidden;
+}
+/* 罩面弧形高光——气泡感 */
+.zen-dome::before {
+  content: "";
+  position: absolute;
+  top: 4%;
+  left: 6%;
+  width: 38%;
+  height: 18%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.22), transparent 70%);
+  transform: rotate(-12deg);
+  pointer-events: none;
+  z-index: 20;
+}
+.zen-dome::after {
+  content: "";
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  width: 18%;
+  height: 8%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(186, 230, 253, 0.14), transparent 70%);
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* 文章排版 */
+.article-prose { line-height: 1.9; letter-spacing: 0.015em; }
+.article-prose p { margin: 1.1em 0; color: #d4d4d8; }
+.article-prose p:hover { color: #e9d5ff; transition: color 0.4s; }
+.article-prose h1, .article-prose h2, .article-prose h3 {
+  color: #fcd34d; margin: 1.6em 0 0.6em; font-weight: 700;
+}
+.article-prose strong { color: #fde68a; }

@@ -1,0 +1,38 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/14qtczpx9_52a.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],""]
+3:I[22432,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/14qtczpx9_52a.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],"ArticleBody"]
+5:I[97367,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/14qtczpx9_52a.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+:HL["/images/hachimi-dragon-cut.png","image"]
+4:Tb38,
+**agent是一种架构模式，功能基于人们的需求
+Hermes、Codex、Claude Code——这些是通用Coding Agent（功能很全）
+
+ **一个最小 Agent 工作流：以 Coding Agent 为例
+
+你对一个 Coding Agent 说：“把项目里所有旧的 `logV1()` 调用换成 `logV2()`，跑通测试。“它内部大致这样跑：
+
+**第一轮**：思考”先找到所有调用点” → 调用 `grep("logV1(")` → 12 个文件、37 处调用。
+
+**第二轮**：思考”逐个文件替换” → 调用 `edit_file(...)` 批量修改 → 其中一处**替换失败**（有人手写了带空格的变体 `logV1 (`，和预期字符串对不上）→ 模型读到失败信息，换更宽松的匹配方式重试，成功。
+
+**第三轮**：思考”改完了，跑测试确认” → 当前上下文里没有现成的测试工具 → 调用 `tool_search("run tests")`，从工具库里按需加载出 `run_tests` → 执行。
+
+**第四轮**：**测试挂了 3 个** → 模型读报错，发现 `logV2()` 的参数顺序和 v1 不一样 → 回去重新修正那几处调用 → 再跑测试 → 全绿。
+
+**第五轮**：思考”任务完成” → 向用户汇报：改了哪些文件、中途踩了什么坑、测试结果。
+
+> **Agent = 一个 LLM 在一个循环里，反复地”想一下、做一下”，直到任务完成。
+
+**Agent 的四件套
+
+把这四件套串起来，你就建立了理解 Agent 工程的基本框架。它们是便于入门的典型组件，不是判断一个系统”算不算 Agent”的硬性清单。
+
+**大脑（LLM）**：就是模型本身。思考和决策，接收当前状态，输出下一步动作（回答用户 / 调用工具）。这里有一个值得尽早建立的视角：模型是四件套里唯一一件你不用（也没法）自己做的——**所以 Agent 开发，做的其实是”模型以外的一切”**。业内把这套外围工程统称为 **Harness**：记忆、工具、循环、上下文管理、可靠性兜底，全是 Harness 的一部分。
+
+**记忆（Memory）**：先按两层建立直觉——**短期记忆**是当前任务的上下文（用户刚说了什么、刚调了什么工具）；**长期记忆**是跨会话的持久信息（用户偏好、关键事实）
+
+**手（Tools / Function Calling / MCP）**：Agent 与外部世界交互的接口——搜索引擎、代码执行、邮件 API、数据库查询都是工具。主流 LLM 厂商都提供原生的 Function Calling（机器人把执行命令告诉harness的格式，老板只发令不干活，员工只听令不决策）能力；第三方工具的标准化接入方式是 MCP。
+
+**循环（Agent Loop）**：`感知 → 思考 → 行动 → 感知 → ...` 最经典的实现叫 ReAct（Reason + Act）。终止条件通常是：模型自己判断完成 / 达到最大步数 / 用户中断。0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-gradient-to-b from-[#150826] via-[#0d0518] to-black","children":["$","article",null,{"className":"mx-auto max-w-2xl px-4 py-14","children":[["$","$L2",null,{"href":"/underworld","className":"text-sm text-zinc-600 transition-colors hover:text-purple-400","children":"← 返回冥界"}],["$","header",null,{"className":"mb-10 mt-6 border-b border-purple-500/15 pb-8","children":[["$","div",null,{"className":"flex items-start justify-between gap-4","children":[["$","h1",null,{"className":"text-3xl font-black leading-snug text-purple-200","children":"什么是Agent"}],["$","img",null,{"src":"/images/hachimi-dragon-cut.png","alt":"耄耋","className":"h-12 w-12 object-contain drop-shadow-[0_0_8px_rgba(126,34,206,0.7)]"}]]}],["$","time",null,{"className":"mt-3 block text-sm tracking-wider text-zinc-600","children":"2026-07-22"}]]}],["$","div",null,{"className":"article-prose","children":["$","$L3",null,{"content":"$4"}]}],["$","footer",null,{"className":"mt-14 border-t border-purple-500/15 pt-6 text-center text-xs text-zinc-700","children":"晨汐 · 冥界区 · 耄耋盯着你看呢"}]]}]}],[["$","script","script-0",{"src":"/_next/static/chunks/1v2xko-18uoq_.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"6_cL5DPTgOG7qNdNAOuro"}
+7:null

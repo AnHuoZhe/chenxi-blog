@@ -1,0 +1,45 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/14qtczpx9_52a.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],""]
+3:I[22432,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/14qtczpx9_52a.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],"ArticleBody"]
+5:I[97367,["/_next/static/chunks/16nsbsmeoqe5j.js","/_next/static/chunks/14qtczpx9_52a.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+:HL["/images/dagou-closed-cut.png","image"]
+4:Ta98,
+晒阳是一个纯工作流型CLI工具。读Hermes的state.db对话记录，按李博杰书中的六角度框架（LLM/上下文/工具/约束/验证/纠正）拆解ReAct循环，生成Word分析报告。
+
+## 为什么做
+
+和Hermes对话了几个月，我发现Agent在agent方面是黑盒——我能看到工具调用记录，但看不到为什么选工具A不选B、为什么判断"这个回答够了"、以及什么时候做了错误推理但输出碰巧正确。李博杰《深入理解AI Agent》第1章的Harness框架（Agent = LLM + [上下文 + 工具 + 约束 + 验证 + 纠正]）给了我一把解剖刀——但我需要一个工具来切，不能每分析一次都手工写一份几十页的报告。
+
+## 报告结构
+
+两段式：
+
+1. 全流程展示——从用户输入到模型输出的每一步，标注在李博杰书中的对应章节。包含用户没说过但Agent实际执行了的步骤（意图解析、任务拆解、约束检查）。
+2. 六角度分析——按六个角度逐一分析本次对话的ReAct循环特征。
+
+## 开发过程中的关键发现
+
+三次纠正事件揭示了审查循环的层级递进规律：
+
+- 技术层纠正：子agent独立审查架构文档→发现Agent设计中的9个盲区。Agent可以自主发现。
+- 产品层纠正：用户审阅报告后发现缺少全流程展示。Agent部分可以自主发现——可以自问"覆盖了所有需求吗？"但用户没说全之前Agent不知道缺了什么。
+- 元认知层纠正：用户发现Agent在报告中美化了自己的推理过程——把概率性关联包装成了精准四层解析。Agent完全无法自主发现——美化自己的同时不可能识别自己在美化。
+
+这是晒阳存在的根本理由：建立一个外部视角，让Agent无法在分析自己时美化自己。
+
+## 架构
+
+纯工作流，非自主Agent。五段式管道：读(session数据)→ 解析(轮次/工具调用)→ 分类(规则层+LLM层)→ 叙述(LLM)→ 输出(Word)。LLM仅在两处介入，失败有降级策略和中间结果缓存。
+
+开源：https://github.com/AnHuoZhe/sunlight
+
+## 成本透视（V3新增）
+
+结构分析告诉你每一步做了什么。成本分析告诉你每一步花了多少。
+
+state.db中已有完整的token统计数据——DeepSeek API每次调用后返回的实际消耗，Hermes记录在messages.token_count和sessions.estimated_cost_usd中。晒阳不需要额外埋点，直接读取真实数据。
+
+双层呈现策略：全流程中只标注成本异常点（热点/节省），避免数字淹没叙事；成本透视章节展示完整数据。精确度三级区分：API返回值（精确）→ 浪费分类（近似）→ 并行节省（估算）。
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-gradient-to-b from-amber-50 to-amber-100/60 text-zinc-900","children":["$","article",null,{"className":"mx-auto max-w-2xl px-4 py-14","children":[["$","$L2",null,{"href":"/posts","className":"text-sm text-zinc-400 transition-colors hover:text-amber-600","children":"← 返回天堂"}],["$","header",null,{"className":"mb-10 mt-6 border-b border-amber-300/40 pb-8","children":[["$","div",null,{"className":"flex items-start justify-between gap-4","children":[["$","h1",null,{"className":"text-3xl font-black leading-snug text-amber-800","children":"晒阳 — Agent ReAct循环透明化分析工具"}],["$","img",null,{"src":"/images/dagou-closed-cut.png","alt":"大狗叫","className":"h-12 w-12 object-contain"}]]}],["$","time",null,{"className":"mt-3 block text-sm tracking-wider text-zinc-400","children":"Tue Jul 21 2026 00:00:00 GMT+0000 (Coordinated Universal Time)"}]]}],["$","div",null,{"className":"article-prose-heaven","children":["$","$L3",null,{"content":"$4"}]}],["$","footer",null,{"className":"mt-14 border-t border-amber-300/40 pt-6 text-center text-xs text-zinc-400","children":"晨汐 · 天堂区 · 比格犬已巡逻过本页"}]]}]}],[["$","script","script-0",{"src":"/_next/static/chunks/1v2xko-18uoq_.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"6_cL5DPTgOG7qNdNAOuro"}
+7:null

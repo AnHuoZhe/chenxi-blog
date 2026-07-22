@@ -2,6 +2,7 @@
 
 import { useZenMode } from "@/contexts/ZenModeContext";
 import { useChargeBar } from "@/hooks/useChargeBar";
+import { DagouSVG } from "@/components/svg/DagouSVG";
 
 export function DagouJiao() {
   const { isZenMode } = useZenMode();
@@ -10,10 +11,8 @@ export function DagouJiao() {
   return (
     <div className="fixed bottom-[20px] right-[20px] z-40 flex flex-col items-center gap-2">
       {/* 圆形容器 */}
-      <div className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-amber-400/60 bg-muted/60 text-4xl backdrop-blur">
-        <span role="img" aria-label="大狗叫">
-          🐕
-        </span>
+      <div className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-amber-400/60 bg-muted/60 backdrop-blur">
+        <DagouSVG size={64} />
       </div>
       {/* 蓄力条 */}
       <div className="w-[120px]">

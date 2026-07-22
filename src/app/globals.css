@@ -296,3 +296,33 @@
 .hiss-puff {
   animation: hiss-puff 3.8s ease-out infinite;
 }
+
+/* ===== SVG角色微动画 ===== */
+/* 比格犬下颚开合（werwerwer） */
+@keyframes beagle-jaw-bark {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(9deg) translateY(2px); }
+}
+.beagle-jaw {
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+  animation: beagle-jaw-bark 0.7s ease-in-out infinite;
+}
+
+/* 耄耋弓背起伏 */
+@keyframes cat-arch-breathe {
+  0%, 100% { transform: scaleY(1); }
+  50%      { transform: scaleY(1.06) translateY(-2px); }
+}
+.cat-arch {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: cat-arch-breathe 2.8s ease-in-out infinite;
+}
+
+/* 哈气雾喷吐 */
+@keyframes hiss-breath-flow {
+  0%, 100% { opacity: 0.2; }
+  50%      { opacity: 1; }
+}
+.hiss-breath { animation: hiss-breath-flow 0.9s ease-in-out infinite; }

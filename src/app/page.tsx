@@ -3,6 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useSound } from "@/hooks/useSound";
+import { DagouSVG } from "@/components/svg/DagouSVG";
+import { HachimiDragonSVG } from "@/components/svg/HachimiDragonSVG";
+import { BeagleSVG } from "@/components/svg/BeagleSVG";
 
 /** 仙境之门 */
 function HeavenDoor() {
@@ -17,9 +20,9 @@ function HeavenDoor() {
         {/* 门环 */}
         <div className="absolute left-6 top-1/2 h-3 w-3 rounded-full border-2 border-amber-400" />
         <div className="absolute right-6 top-1/2 h-3 w-3 rounded-full border-2 border-amber-400" />
-        {/* 大狗叫：站立张嘴 */}
-        <span className="relative z-10 text-6xl drop-shadow-[0_2px_6px_rgba(120,72,0,0.45)] transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110">
-          🐕
+        {/* 大狗叫：仰头张嘴咆哮 */}
+        <span className="relative z-10 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110">
+          <DagouSVG size={72} />
         </span>
         {/* 门匾 */}
         <span className="relative z-10 mt-1 text-2xl font-black tracking-[0.4em] text-amber-700 [writing-mode:horizontal-tb]">
@@ -58,9 +61,9 @@ function DoomDoor() {
             <ellipse key={i} cx={8 + i * 16} cy="16" rx="9" ry="6" fill="none" stroke="#4b5563" strokeWidth="3" />
           ))}
         </svg>
-        {/* 耄耋哈基米：弓背哈气，周期性炸毛 */}
+        {/* 耄耋哈基米：龙像尽显，烦躁弓背 */}
         <span className="relative z-10 inline-block">
-          <span className="cat-menace text-6xl">😾</span>
+          <HachimiDragonSVG size={80} />
           <span className="hiss-puff absolute -top-2 left-1/2 -translate-x-1/2 text-xl text-purple-200">
             哈——
           </span>
@@ -119,7 +122,7 @@ export default function Home() {
               wer wer wer!
             </span>
           )}
-          <span className="text-[9rem] leading-none drop-shadow-[0_6px_16px_rgba(0,0,0,0.75)]">🐶</span>
+          <span className="drop-shadow-[0_6px_16px_rgba(0,0,0,0.75)]"><BeagleSVG size={150} /></span>
         </button>
       </div>
 

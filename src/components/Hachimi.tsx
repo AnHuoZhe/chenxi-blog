@@ -4,6 +4,8 @@ import { useRef, useState } from "react";
 import { useZenMode } from "@/contexts/ZenModeContext";
 import { useInvasion } from "@/contexts/InvasionContext";
 import { useSound } from "@/hooks/useSound";
+import { HachimiRoundSVG } from "@/components/svg/HachimiRoundSVG";
+import { HachimiHissSVG } from "@/components/svg/HachimiHissSVG";
 
 type Phase = "idle" | "sucking" | "spinosaurus";
 
@@ -50,9 +52,7 @@ export function Hachimi() {
       )}
       {phase === "spinosaurus" && (
         <>
-          <span className="text-4xl" role="img" aria-label="棘背龙">
-            🦖
-          </span>
+          <HachimiHissSVG size={72} />
           <span className="text-xs font-bold text-purple-400">棘背龙形态！</span>
         </>
       )}
@@ -61,12 +61,8 @@ export function Hachimi() {
           <span className="text-4xl" role="img" aria-label="盒子">
             📦
           </span>
-          <span
-            className={`text-4xl ${isInvading ? "hachimi-shake" : ""}`}
-            role="img"
-            aria-label="哈基米"
-          >
-            🐱
+          <span className={isInvading ? "hachimi-shake" : ""}>
+            <HachimiRoundSVG size={48} />
           </span>
           <span className="text-xs text-muted-foreground">
             {isZenMode ? "被隔离在罩子外" : isInvading ? "哈气!" : "哈基米"}

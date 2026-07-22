@@ -161,3 +161,22 @@
   display: inline-block;
   animation: hachimi-box-glow 0.8s ease-in-out infinite;
 }
+
+/* 哈基米被吸入盒子：缩小+旋转 */
+@keyframes hachimi-suck {
+  from { transform: scale(1) rotate(0deg); opacity: 1; }
+  to   { transform: scale(0) rotate(720deg); opacity: 0; }
+}
+.hachimi-suck {
+  display: inline-block;
+  animation: hachimi-suck 0.5s ease-in forwards;
+}
+
+/* 大狗叫蓄力满：蓄力条闪烁 */
+@keyframes dagou-flash {
+  0%, 100% { box-shadow: 0 0 4px rgba(250, 204, 21, 0.6); }
+  50%      { box-shadow: 0 0 18px rgba(250, 204, 21, 1); }
+}
+.dagou-flash {
+  animation: dagou-flash 0.3s ease-in-out 4;
+}

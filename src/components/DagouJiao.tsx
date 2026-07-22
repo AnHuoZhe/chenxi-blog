@@ -1,9 +1,11 @@
 "use client";
 
 import { useZenMode } from "@/contexts/ZenModeContext";
+import { useChargeBar } from "@/hooks/useChargeBar";
 
 export function DagouJiao() {
   const { isZenMode } = useZenMode();
+  const { charge, flash } = useChargeBar();
 
   return (
     <div className="fixed bottom-[20px] right-[20px] z-40 flex flex-col items-center gap-2">
@@ -13,10 +15,17 @@ export function DagouJiao() {
           🐕
         </span>
       </div>
-      {/* 蓄力条：目前固定50%假数据 */}
+      {/* 蓄力条 */}
       <div className="w-[120px]">
-        <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
-          <div className="h-full w-1/2 rounded-full bg-amber-400" />
+        <div
+          className={`h-2 w-full overflow-hidden rounded-full bg-muted ${
+            flash ? "dagou-flash" : ""
+          }`}
+        >
+          <div
+            className="h-full rounded-full bg-amber-400 transition-all duration-300"
+            style={{ width: `${charge}%` }}
+          />
         </div>
         <p className="mt-1 text-center text-xs text-muted-foreground">
           {isZenMode ? "被隔离在罩子外…" : "大狗大狗大狗…"}

@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { useZenMode } from "@/contexts/ZenModeContext";
+import { useSound } from "@/hooks/useSound";
 
 export function Beagle() {
   const { isZenMode } = useZenMode();
+  const { play } = useSound();
   const [showBubble, setShowBubble] = useState(false);
 
   // 随机5-15秒弹出"wer wer wer!"气泡，2秒后消失；静心模式停止
@@ -18,6 +20,7 @@ export function Beagle() {
     const schedule = () => {
       nextTimer = setTimeout(() => {
         setShowBubble(true);
+        play("beagle-wer");
         hideTimer = setTimeout(() => {
           setShowBubble(false);
           schedule();

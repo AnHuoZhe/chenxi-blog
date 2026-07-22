@@ -7,6 +7,7 @@ import { MainShell } from "@/components/MainShell";
 import { Beagle } from "@/components/Beagle";
 import { DagouJiao } from "@/components/DagouJiao";
 import { Hachimi } from "@/components/Hachimi";
+import { MusicPlayer } from "@/components/MusicPlayer";
 
 export const metadata: Metadata = {
   title: "大狗叫博客",
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Beagle />
           <DagouJiao />
           <Hachimi />
+          <MusicPlayer />
           </InvasionProvider>
         </ZenModeProvider>
       </body>

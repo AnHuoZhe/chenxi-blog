@@ -1,0 +1,57 @@
+1:"$Sreact.fragment"
+2:I[75826,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"ZenModeProvider"]
+3:I[10969,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"InvasionProvider"]
+4:I[3020,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"SiteHeader"]
+5:I[48875,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"MainShell"]
+6:I[39756,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"default"]
+7:I[37457,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"default"]
+8:I[84302,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"Beagle"]
+9:I[14260,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"DagouJiao"]
+a:I[69466,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"Hachimi"]
+b:I[39963,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"MusicPlayer"]
+d:I[97367,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
+11:I[97367,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"ViewportBoundary"]
+13:I[97367,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"MetadataBoundary"]
+15:I[68027,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"default",1]
+:HL["/_next/static/chunks/458p12ost-gsr.css","style"]
+0:{"P":null,"c":["","posts","what-is-an-agent"],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","what-is-an-agent","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/458p12ost-gsr.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/29ormmsm5zerw.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/14mrh2-p_w84d.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/0lm7fv78uhzhe.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","className":"dark h-full antialiased","children":["$","body",null,{"className":"min-h-full flex flex-col bg-background text-foreground","children":["$","$L2",null,{"children":["$","$L3",null,{"children":[["$","$L4",null,{}],["$","$L5",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{}]]}]}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$Lc",[["$","script","script-0",{"src":"/_next/static/chunks/1v2xko-18uoq_.js","async":true,"nonce":"$undefined"}]],["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]]}],{},null,false,null]},null,false,"$@10"]},null,false,"$@10"]},null,false,null],["$","$1","h",{"children":[null,["$","$L11",null,{"children":"$L12"}],["$","div",null,{"hidden":true,"children":["$","$L13",null,{"children":["$","$e",null,{"name":"Next.Metadata","children":"$L14"}]}]}],null]}],false]],"m":"$undefined","G":["$15",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/458p12ost-gsr.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"yqKpPkXYPygSKe7wrKe17"}
+16:[]
+10:"$W16"
+17:I[22016,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js","/_next/static/chunks/1v2xko-18uoq_.js"],""]
+18:I[22432,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js","/_next/static/chunks/1v2xko-18uoq_.js"],"ArticleBody"]
+19:Tb38,
+**agent是一种架构模式，功能基于人们的需求
+Hermes、Codex、Claude Code——这些是通用Coding Agent（功能很全）
+
+ **一个最小 Agent 工作流：以 Coding Agent 为例
+
+你对一个 Coding Agent 说：“把项目里所有旧的 `logV1()` 调用换成 `logV2()`，跑通测试。“它内部大致这样跑：
+
+**第一轮**：思考”先找到所有调用点” → 调用 `grep("logV1(")` → 12 个文件、37 处调用。
+
+**第二轮**：思考”逐个文件替换” → 调用 `edit_file(...)` 批量修改 → 其中一处**替换失败**（有人手写了带空格的变体 `logV1 (`，和预期字符串对不上）→ 模型读到失败信息，换更宽松的匹配方式重试，成功。
+
+**第三轮**：思考”改完了，跑测试确认” → 当前上下文里没有现成的测试工具 → 调用 `tool_search("run tests")`，从工具库里按需加载出 `run_tests` → 执行。
+
+**第四轮**：**测试挂了 3 个** → 模型读报错，发现 `logV2()` 的参数顺序和 v1 不一样 → 回去重新修正那几处调用 → 再跑测试 → 全绿。
+
+**第五轮**：思考”任务完成” → 向用户汇报：改了哪些文件、中途踩了什么坑、测试结果。
+
+> **Agent = 一个 LLM 在一个循环里，反复地”想一下、做一下”，直到任务完成。
+
+**Agent 的四件套
+
+把这四件套串起来，你就建立了理解 Agent 工程的基本框架。它们是便于入门的典型组件，不是判断一个系统”算不算 Agent”的硬性清单。
+
+**大脑（LLM）**：就是模型本身。思考和决策，接收当前状态，输出下一步动作（回答用户 / 调用工具）。这里有一个值得尽早建立的视角：模型是四件套里唯一一件你不用（也没法）自己做的——**所以 Agent 开发，做的其实是”模型以外的一切”**。业内把这套外围工程统称为 **Harness**：记忆、工具、循环、上下文管理、可靠性兜底，全是 Harness 的一部分。
+
+**记忆（Memory）**：先按两层建立直觉——**短期记忆**是当前任务的上下文（用户刚说了什么、刚调了什么工具）；**长期记忆**是跨会话的持久信息（用户偏好、关键事实）
+
+**手（Tools / Function Calling / MCP）**：Agent 与外部世界交互的接口——搜索引擎、代码执行、邮件 API、数据库查询都是工具。主流 LLM 厂商都提供原生的 Function Calling（机器人把执行命令告诉harness的格式，老板只发令不干活，员工只听令不决策）能力；第三方工具的标准化接入方式是 MCP。
+
+**循环（Agent Loop）**：`感知 → 思考 → 行动 → 感知 → ...` 最经典的实现叫 ReAct（Reason + Act）。终止条件通常是：模型自己判断完成 / 达到最大步数 / 用户中断。c:["$","article",null,{"className":"mx-auto max-w-3xl px-4 py-12","children":[["$","$L17",null,{"href":"/posts","className":"text-sm text-muted-foreground hover:text-foreground","children":"← 返回天堂"}],["$","h1",null,{"className":"mb-2 mt-4 text-3xl font-bold","children":"什么是Agent"}],["$","p",null,{"className":"mb-8 text-sm text-muted-foreground","children":"2026-07-22"}],["$","div",null,{"className":"prose prose-invert max-w-none leading-7 [&_p]:my-4","children":["$","$L18",null,{"content":"$19"}]}]]}]
+12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[27201,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"IconMark"]
+f:null
+14:[["$","title","0",{"children":"大狗叫博客"}],["$","meta","1",{"name":"description","content":"三元抽象个人博客：比格犬守门，大狗叫镇天堂，哈基米守冥界。"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.2vob68tjqpejf.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L1a","3",{}]]

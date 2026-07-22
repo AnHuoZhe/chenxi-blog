@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[22016,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js","/_next/static/chunks/1v2xko-18uoq_.js"],""]
-3:I[22432,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js","/_next/static/chunks/1v2xko-18uoq_.js"],"ArticleBody"]
-5:I[97367,["/_next/static/chunks/29ormmsm5zerw.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/0lm7fv78uhzhe.js"],"OutletBoundary"]
+2:I[22016,["/_next/static/chunks/2fxs2_360_49d.js","/_next/static/chunks/0dw8k10in276u.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],""]
+3:I[22432,["/_next/static/chunks/2fxs2_360_49d.js","/_next/static/chunks/0dw8k10in276u.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1v2xko-18uoq_.js"],"ArticleBody"]
+5:I[97367,["/_next/static/chunks/2fxs2_360_49d.js","/_next/static/chunks/0dw8k10in276u.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
 6:"$Sreact.suspense"
 4:Tb38,
 **agent是一种架构模式，功能基于人们的需求
@@ -33,5 +33,5 @@ Hermes、Codex、Claude Code——这些是通用Coding Agent（功能很全）
 
 **手（Tools / Function Calling / MCP）**：Agent 与外部世界交互的接口——搜索引擎、代码执行、邮件 API、数据库查询都是工具。主流 LLM 厂商都提供原生的 Function Calling（机器人把执行命令告诉harness的格式，老板只发令不干活，员工只听令不决策）能力；第三方工具的标准化接入方式是 MCP。
 
-**循环（Agent Loop）**：`感知 → 思考 → 行动 → 感知 → ...` 最经典的实现叫 ReAct（Reason + Act）。终止条件通常是：模型自己判断完成 / 达到最大步数 / 用户中断。0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto max-w-3xl px-4 py-12","children":[["$","$L2",null,{"href":"/posts","className":"text-sm text-muted-foreground hover:text-foreground","children":"← 返回天堂"}],["$","h1",null,{"className":"mb-2 mt-4 text-3xl font-bold","children":"什么是Agent"}],["$","p",null,{"className":"mb-8 text-sm text-muted-foreground","children":"2026-07-22"}],["$","div",null,{"className":"prose prose-invert max-w-none leading-7 [&_p]:my-4","children":["$","$L3",null,{"content":"$4"}]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/1v2xko-18uoq_.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"yqKpPkXYPygSKe7wrKe17"}
+**循环（Agent Loop）**：`感知 → 思考 → 行动 → 感知 → ...` 最经典的实现叫 ReAct（Reason + Act）。终止条件通常是：模型自己判断完成 / 达到最大步数 / 用户中断。0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto max-w-3xl px-4 py-12","children":[["$","$L2",null,{"href":"/posts","className":"text-sm text-muted-foreground hover:text-foreground","children":"← 返回天堂"}],["$","h1",null,{"className":"mb-2 mt-4 text-3xl font-bold","children":"什么是Agent"}],["$","p",null,{"className":"mb-8 text-sm text-muted-foreground","children":"2026-07-22"}],["$","div",null,{"className":"prose prose-invert max-w-none leading-7 [&_p]:my-4","children":["$","$L3",null,{"content":"$4"}]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/1v2xko-18uoq_.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"C1icw-zLWVxnSmhhGc3BF"}
 7:null

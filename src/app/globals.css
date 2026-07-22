@@ -180,3 +180,119 @@
 .dagou-flash {
   animation: dagou-flash 0.3s ease-in-out 4;
 }
+
+/* ===== 首页两界场景 ===== */
+/* 云朵漂移 */
+@keyframes cloud-drift {
+  from { transform: translateX(-10%); }
+  to   { transform: translateX(110vw); }
+}
+.cloud-drift { animation: cloud-drift linear infinite; }
+
+/* 邪域紫雾升腾 */
+@keyframes mist-rise {
+  0%   { transform: translateY(20px) scale(1); opacity: 0; }
+  40%  { opacity: 0.7; }
+  100% { transform: translateY(-120px) scale(1.3); opacity: 0; }
+}
+.mist-rise { animation: mist-rise ease-in infinite; }
+
+/* 仙境之门：光缝呼吸 */
+@keyframes holy-breathe {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(253, 230, 138, 0.5)); }
+  50%      { filter: drop-shadow(0 0 34px rgba(253, 230, 138, 0.95)); }
+}
+.holy-breathe { animation: holy-breathe 3.2s ease-in-out infinite; }
+
+/* 天堂光柱缓缓扫动 */
+@keyframes ray-sweep {
+  0%, 100% { opacity: 0.25; transform: rotate(8deg); }
+  50%      { opacity: 0.6;  transform: rotate(12deg); }
+}
+.ray-sweep { animation: ray-sweep 7s ease-in-out infinite; transform-origin: top center; }
+
+/* 邪域之门：不安的震颤 */
+@keyframes doom-rattle {
+  0%, 88%, 100% { transform: translateX(0); }
+  90% { transform: translateX(-2px); }
+  92% { transform: translateX(2px); }
+  94% { transform: translateX(-1px); }
+  96% { transform: translateX(1px); }
+}
+.doom-rattle { animation: doom-rattle 5s ease-in-out infinite; }
+
+/* 锁链摇晃 */
+@keyframes chain-sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50%      { transform: rotate(2deg); }
+}
+.chain-sway { animation: chain-sway 4s ease-in-out infinite; transform-origin: top center; }
+
+/* 邪域紫光脉动 */
+@keyframes doom-pulse {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.4)); }
+  50%      { filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.9)); }
+}
+.doom-pulse { animation: doom-pulse 2.6s ease-in-out infinite; }
+
+/* 两界分界线微光 */
+@keyframes horizon-glow {
+  0%, 100% { opacity: 0.5; }
+  50%      { opacity: 1; }
+}
+.horizon-glow { animation: horizon-glow 4s ease-in-out infinite; }
+
+/* 标题晨汐浮现 */
+@keyframes title-emerge {
+  from { opacity: 0; letter-spacing: 0.2em; filter: blur(6px); }
+  to   { opacity: 1; letter-spacing: 0.5em; filter: blur(0); }
+}
+.title-emerge { animation: title-emerge 2.4s ease-out both; }
+
+/* 比格犬呼吸起伏 */
+@keyframes beagle-idle {
+  0%, 100% { transform: translateY(0) scale(1, 1); }
+  50%      { transform: translateY(-3px) scale(1.02, 0.98); }
+}
+.beagle-idle { animation: beagle-idle 2.4s ease-in-out infinite; }
+
+/* 冥界之门hover时的哈气文字 */
+@keyframes hiss-in {
+  from { opacity: 0; transform: translateX(10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.hiss-in { animation: hiss-in 0.4s ease-out both; }
+
+/* 耄耋哈气：周期性弓背→炸毛→哈气 */
+@keyframes cat-menace {
+  0%, 68%, 100% {
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.8));
+  }
+  74% {
+    /* 弓背压低 */
+    transform: scale(1.22, 0.78) translateY(6px);
+    filter: drop-shadow(0 0 20px rgba(220, 38, 38, 0.9));
+  }
+  80% {
+    /* 炸毛弹起 */
+    transform: scale(1.08, 1.18) translateY(-8px);
+    filter: drop-shadow(0 0 26px rgba(220, 38, 38, 1));
+  }
+  84% { transform: scale(1.15, 0.9) translateY(2px); }
+  88% { transform: scale(1.05, 1.02) translateY(0); }
+}
+.cat-menace {
+  display: inline-block;
+  animation: cat-menace 3.8s ease-in-out infinite;
+}
+
+/* 哈气白雾，与cat-menace同周期，在炸毛瞬间喷出 */
+@keyframes hiss-puff {
+  0%, 76%, 100% { opacity: 0; transform: translateY(0) scale(0.6); }
+  80% { opacity: 0.9; transform: translateY(-14px) scale(1); }
+  90% { opacity: 0; transform: translateY(-30px) scale(1.4); }
+}
+.hiss-puff {
+  animation: hiss-puff 3.8s ease-out infinite;
+}

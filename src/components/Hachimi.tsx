@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { useZenMode } from "@/contexts/ZenModeContext";
+import { useInvasion } from "@/contexts/InvasionContext";
 
 export function Hachimi() {
   const { isZenMode } = useZenMode();
+  const { isInvading } = useInvasion();
   const [inBox, setInBox] = useState(false);
 
   return (
@@ -15,17 +17,24 @@ export function Hachimi() {
       aria-label={inBox ? "打开哈基米盒子" : "哈基米"}
     >
       {inBox ? (
-        // 盒子状态：点击切换，动画后续做
-        <span className="text-4xl" role="img" aria-label="盒子">
+        <span
+          className={`text-4xl ${isInvading ? "hachimi-box-glow" : ""}`}
+          role="img"
+          aria-label="盒子"
+        >
           📦
         </span>
       ) : (
         <>
-          <span className="text-4xl" role="img" aria-label="哈基米">
+          <span
+            className={`text-4xl ${isInvading ? "hachimi-shake" : ""}`}
+            role="img"
+            aria-label="哈基米"
+          >
             🐱
           </span>
           <span className="text-xs text-muted-foreground">
-            {isZenMode ? "被隔离在罩子外" : "哈基米"}
+            {isZenMode ? "被隔离在罩子外" : isInvading ? "哈气!" : "哈基米"}
           </span>
         </>
       )}

@@ -128,3 +128,36 @@
     @apply font-sans;
   }
 }
+/* 比格犬巡逻：20秒一趟，两端各停2秒嗅探 */
+@keyframes beagle-patrol {
+  0%   { transform: translateX(0); }
+  10%  { transform: translateX(0); }
+  45%  { transform: translateX(calc(100vw - 70px)); }
+  55%  { transform: translateX(calc(100vw - 70px)); }
+  90%  { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+.beagle-patrol {
+  animation: beagle-patrol 20s linear infinite;
+}
+
+/* 哈基米冥界入侵：变大+抖动 */
+@keyframes hachimi-shake {
+  0%, 100% { transform: scale(1.4) rotate(0deg); }
+  25%      { transform: scale(1.4) rotate(-8deg); }
+  75%      { transform: scale(1.4) rotate(8deg); }
+}
+.hachimi-shake {
+  display: inline-block;
+  animation: hachimi-shake 0.4s ease-in-out infinite;
+}
+
+/* 盒子高亮发光 */
+@keyframes hachimi-box-glow {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.8)); transform: scale(1.15); }
+  50%      { filter: drop-shadow(0 0 14px rgba(168, 85, 247, 1)); transform: scale(1.25); }
+}
+.hachimi-box-glow {
+  display: inline-block;
+  animation: hachimi-box-glow 0.8s ease-in-out infinite;
+}

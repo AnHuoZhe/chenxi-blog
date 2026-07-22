@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ZenModeProvider } from "@/contexts/ZenModeContext";
+import { InvasionProvider } from "@/contexts/InvasionContext";
 import { SiteHeader } from "@/components/site-header";
 import { MainShell } from "@/components/MainShell";
 import { Beagle } from "@/components/Beagle";
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="zh-CN" className="dark h-full antialiased">
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ZenModeProvider>
+          <InvasionProvider>
           {/* 顶部导航栏（静心模式开关） */}
           <SiteHeader />
           {/* 全屏天堂主内容区（珊迪玻璃罩） */}
@@ -29,6 +31,7 @@ export default function RootLayout({
           <Beagle />
           <DagouJiao />
           <Hachimi />
+          </InvasionProvider>
         </ZenModeProvider>
       </body>
     </html>

@@ -20,8 +20,11 @@ export function useChargeBar() {
   // 初始值从localStorage读取
   useEffect(() => {
     const saved = Number(localStorage.getItem(STORAGE_KEY) ?? 0);
-    if (saved > 0 && saved < 100) setCharge(saved);
     lastScrollY.current = window.scrollY;
+    if (saved > 0 && saved < 100) {
+      const t = setTimeout(() => setCharge(saved), 0);
+      return () => clearTimeout(t);
+    }
   }, []);
 
   const gain = (amount: number) => {
@@ -40,7 +43,9 @@ export function useChargeBar() {
     });
   };
   const gainRef = useRef(gain);
-  gainRef.current = gain;
+  useEffect(() => {
+    gainRef.current = gain;
+  });
 
   useEffect(() => {
     // 滚动超200px：+1

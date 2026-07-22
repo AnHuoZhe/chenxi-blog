@@ -23,18 +23,18 @@ export function MusicPlayer() {
 
   // 静心模式开启立即静音（组件只是隐藏，Audio对象不会自动停）
   useEffect(() => {
-    if (isZenMode) {
-      audioRef.current?.pause();
-      setPlaying(false);
-    }
+    if (isZenMode) audioRef.current?.pause();
   }, [isZenMode]);
+
+  // zen下视为未播放（界面隐藏，恢复后显示为暂停态）
+  const isPlaying = playing && !isZenMode;
 
   if (isZenMode) return null;
 
   const togglePlay = () => {
     const audio = audioRef.current;
     if (!audio) return;
-    if (playing) {
+    if (isPlaying) {
       audio.pause();
       setPlaying(false);
     } else {
@@ -70,9 +70,9 @@ export function MusicPlayer() {
         type="button"
         onClick={togglePlay}
         className="text-sm hover:text-foreground/80"
-        aria-label={playing ? "暂停" : "播放"}
+        aria-label={isPlaying ? "暂停" : "播放"}
       >
-        {playing ? "⏸" : "▶"}
+        {isPlaying ? "⏸" : "▶"}
       </button>
       <button
         type="button"

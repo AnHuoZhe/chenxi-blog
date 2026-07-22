@@ -11,10 +11,7 @@ export function Beagle() {
 
   // 随机5-15秒弹出"wer wer wer!"气泡，2秒后消失；静心模式停止
   useEffect(() => {
-    if (isZenMode) {
-      setShowBubble(false);
-      return;
-    }
+    if (isZenMode) return;
     let hideTimer: ReturnType<typeof setTimeout>;
     let nextTimer: ReturnType<typeof setTimeout>;
     const schedule = () => {

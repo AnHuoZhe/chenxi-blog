@@ -415,3 +415,12 @@
   color: #fcd34d; margin: 1.6em 0 0.6em; font-weight: 700;
 }
 .article-prose strong { color: #fde68a; }
+
+/* 天堂区文章排版（亮色） */
+.article-prose-heaven { line-height: 1.9; letter-spacing: 0.015em; }
+.article-prose-heaven p { margin: 1.1em 0; color: #3f3f46; }
+.article-prose-heaven p:hover { color: #92400e; transition: color 0.4s; }
+.article-prose-heaven h1, .article-prose-heaven h2, .article-prose-heaven h3 {
+  color: #b45309; margin: 1.6em 0 0.6em; font-weight: 700;
+}
+.article-prose-heaven strong { color: #92400e; }

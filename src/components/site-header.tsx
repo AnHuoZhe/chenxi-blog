@@ -23,9 +23,12 @@ export function SiteHeader() {
           >
             天堂
           </Link>
-          <span className="cursor-not-allowed text-zinc-600" title="锁链还封着">
+          <Link
+            href="/underworld"
+            className="text-zinc-300 transition-colors hover:text-purple-400"
+          >
             冥界
-          </span>
+          </Link>
           {/* 静心模式：珊迪玻璃罩 */}
           <label className="flex items-center gap-2">
             <span className="text-zinc-400">静心</span>

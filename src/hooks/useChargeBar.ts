@@ -55,7 +55,8 @@ export function useChargeBar() {
     // 点击文章链接：+5（事件委托）
     const onClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest?.("a");
-      if (anchor?.getAttribute("href")?.startsWith("/posts/")) {
+      const href = anchor?.getAttribute("href");
+      if (href?.startsWith("/posts/") || href?.startsWith("/underworld/")) {
         gainRef.current(5);
       }
     };

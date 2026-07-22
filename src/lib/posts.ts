@@ -2,7 +2,12 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const POSTS_DIR = path.join(process.cwd(), "content", "我的感悟");
+export type Realm = "heaven" | "underworld";
+
+const DIRS: Record<Realm, string> = {
+  heaven: path.join(process.cwd(), "content", "个体"),
+  underworld: path.join(process.cwd(), "content", "我的感悟"),
+};
 
 export interface PostMeta {
   slug: string;
@@ -23,12 +28,13 @@ function stripMarkdown(md: string): string {
     .trim();
 }
 
-export function getAllPosts(): PostMeta[] {
-  const files = fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith(".md"));
+export function getAllPosts(realm: Realm): PostMeta[] {
+  const dir = DIRS[realm];
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md"));
   return files
     .map((file) => {
       const slug = file.replace(/\.md$/, "");
-      const fullPath = path.join(POSTS_DIR, file);
+      const fullPath = path.join(dir, file);
       const { data, content } = matter(fs.readFileSync(fullPath, "utf8"));
       const stat = fs.statSync(fullPath);
       return {
@@ -43,8 +49,8 @@ export function getAllPosts(): PostMeta[] {
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export function getPost(slug: string): Post | null {
-  const fullPath = path.join(POSTS_DIR, `${slug}.md`);
+export function getPost(realm: Realm, slug: string): Post | null {
+  const fullPath = path.join(DIRS[realm], `${slug}.md`);
   if (!fs.existsSync(fullPath)) return null;
   const { data, content } = matter(fs.readFileSync(fullPath, "utf8"));
   const stat = fs.statSync(fullPath);

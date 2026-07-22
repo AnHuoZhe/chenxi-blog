@@ -64,8 +64,9 @@ function HeavenDoor() {
 function DoomDoor() {
   const [hiss, setHiss] = useState(false);
   return (
-    <div
-      className="group relative block cursor-not-allowed"
+    <Link
+      href="/underworld"
+      className="group relative block"
       onMouseEnter={() => setHiss(true)}
       onMouseLeave={() => setHiss(false)}
     >
@@ -102,10 +103,10 @@ function DoomDoor() {
       </div>
       {hiss && (
         <p className="hiss-in absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-sm tracking-widest text-purple-400">
-          哈——老吴哦~（锁链还封着）
+          哈——老吴哦~（敢进来吗）
         </p>
       )}
-    </div>
+    </Link>
   );
 }
 
